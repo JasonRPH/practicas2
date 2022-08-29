@@ -26,3 +26,7 @@ D:\Documentos\Visual Studio 2015\Projects\github\Practicas\Prácticas\Prácticas
 D:\Documentos\Visual Studio 2015\Projects\github\Practicas\Prácticas\Prácticas\obj\Debug\Prácticas.exe
 D:\Documentos\Visual Studio 2015\Projects\github\Practicas\Prácticas\Prácticas\obj\Debug\Prácticas.xml
 D:\Documentos\Visual Studio 2015\Projects\github\Practicas\Prácticas\Prácticas\obj\Debug\Prácticas.pdb
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\Prácticas.exe.config
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.exe
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.xml
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.pdb
