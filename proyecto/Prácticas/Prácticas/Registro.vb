@@ -13,7 +13,7 @@ Public Class Registro
             conn = objetoconexion.AbrirCon
             Try
                 cmd = conn.CreateCommand
-                cmd.CommandText = "INSERT INTO usuario(id_usuario, Nombre, Apellido, Direccion_usuario, telefono_Usuario, usuario, contra) VALUES ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "');"
+                cmd.CommandText = "INSERT INTO usuario(Nombre, Apellido, Direccion_usuario, telefono_Usuario, usuario, contra) VALUES ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "');"
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
@@ -36,5 +36,4 @@ Public Class Registro
             TextBox7.Focus()
         End If
     End Sub
-
 End Class

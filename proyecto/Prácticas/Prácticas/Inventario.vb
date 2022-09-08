@@ -4,7 +4,6 @@ Imports System.Configuration
 Public Class Inventario
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
-
     Dim cmd As MySqlCommand
 
     Private Sub mostrar()
@@ -22,7 +21,7 @@ Public Class Inventario
         conn = objetoconexion.AbrirCon
         Try
             cmd = conn.CreateCommand
-            cmd.CommandText = "INSERT INTO producto(producto, cantidad, precio) VALUES ( '" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "');"
+            cmd.CommandText = "INSERT INTO inventario(producto, cantidad, precio) VALUES ( '" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "');"
 
             cmd.ExecuteNonQuery()
             conn.Close()
@@ -48,6 +47,21 @@ Public Class Inventario
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        conn = objetoconexion.AbrirCon
+        Try
+            cmd = conn.CreateCommand
+            cmd.CommandText = "UPDATE inventario SET producto =@nom, cantidad =@can WHERE id_producto =@cod"
+            cmd.Parameters.AddWithValue("@cod", TextBox1.Text)
+            cmd.Parameters.AddWithValue("@nom", TextBox2.Text)
+            cmd.Parameters.AddWithValue("@mod", TextBox3.Text)
+            mostrar()
+            conn.Close()
+            conn.Dispose()
+            TextBox1.Clear()
+            TextBox2.Clear()
+            TextBox3.Clear()
+        Catch ex As Exception
 
+        End Try
     End Sub
 End Class
