@@ -47,8 +47,7 @@ Public Class clientes
             conn.Open()
         End If
 
-        Dim cmd As New MySqlCommand("INSERT INTO clientes(id_
-cliente, grupo, nombre, modelo, id_fabricante, descrp_producto, precio_producto, proveedores) VALUES (" & TBcod.Text & ",'" & ComboBox1.Text & "','" & TBnombre.Text & "', '" & TBmodelo.Text & "', '" & TBfabricante.Text & "','" & TBdescrip.Text & "'," & TBprecio.Text & ",'" & TBproveedor.Text & "')", conn)
+
 
 
         cmd.ExecuteNonQuery()
@@ -62,5 +61,9 @@ cliente, grupo, nombre, modelo, id_fabricante, descrp_producto, precio_producto,
 
 
         limpiar()
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
     End Sub
 End Class

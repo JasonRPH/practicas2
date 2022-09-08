@@ -15,7 +15,7 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         comando.Connection = conexion
         Try
-            conexion.ConnectionString = "Server = localhost; Database = prácticas; Uid = root; Pwd =;"
+            conexion.ConnectionString = "Server = localhost; Database = practicas; Uid = root; Pwd =;"
             conexion.Open()
 
         Catch ex As Exception
@@ -42,6 +42,12 @@ Public Class Form1
         Else
             TextBox2.PasswordChar = ""
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Registro.Show()
+        Me.Hide()
+
     End Sub
 End Class
 

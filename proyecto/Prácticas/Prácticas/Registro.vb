@@ -3,8 +3,7 @@ Imports MySql.Data.MySqlClient
 Imports System.Configuration.ConfigurationManager
 Imports System.Configuration
 Imports System.Runtime.InteropServices
-'cualuqier
-'lo que sea
+
 Public Class Registro
     Dim conn As New MySqlConnection
     Dim objetoconexion As New conexion
@@ -14,7 +13,7 @@ Public Class Registro
             conn = objetoconexion.AbrirCon
             Try
                 cmd = conn.CreateCommand
-                cmd.CommandText = "INSERT INTO usuario(Nombre, Apellido, Direccion_usuario, telefono_Usuario, usuario, contra) VALUES('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "',');"
+                cmd.CommandText = "INSERT INTO usuario(id_usuario, Nombre, Apellido, Direccion_usuario, telefono_Usuario, usuario, contra) VALUES ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "');"
                 cmd.ExecuteNonQuery()
                 conn.Close()
                 conn.Dispose()
@@ -38,7 +37,4 @@ Public Class Registro
         End If
     End Sub
 
-    Private Sub Registro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
