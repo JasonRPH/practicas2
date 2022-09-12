@@ -22,6 +22,7 @@ Partial Class Cuentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cuentas))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -29,71 +30,94 @@ Partial Class Cuentas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 25)
+        Me.Label1.BackColor = System.Drawing.Color.PowderBlue
+        Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(11, 131)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(34, 13)
+        Me.Label1.Size = New System.Drawing.Size(50, 23)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Saldo"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(53, 25)
+        Me.TextBox1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox1.Location = New System.Drawing.Point(184, 73)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(120, 20)
         Me.TextBox1.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(11, 79)
+        Me.Label2.BackColor = System.Drawing.Color.PowderBlue
+        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(11, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.Size = New System.Drawing.Size(79, 23)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Depositos"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(288, 126)
+        Me.Button1.BackColor = System.Drawing.Color.PowderBlue
+        Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(312, 186)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(146, 23)
+        Me.Button1.Size = New System.Drawing.Size(184, 35)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Generar orden de pago"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 126)
+        Me.Label3.BackColor = System.Drawing.Color.PowderBlue
+        Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(11, 73)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 13)
+        Me.Label3.Size = New System.Drawing.Size(141, 23)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Cuentas bancarias"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(112, 123)
+        Me.TextBox3.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox3.Location = New System.Drawing.Point(184, 136)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(120, 20)
         Me.TextBox3.TabIndex = 6
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(71, 79)
+        Me.NumericUpDown1.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.NumericUpDown1.Location = New System.Drawing.Point(184, 12)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown1.TabIndex = 7
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, -1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(509, 246)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'Cuentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(446, 188)
+        Me.ClientSize = New System.Drawing.Size(508, 244)
         Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label3)
@@ -101,9 +125,11 @@ Partial Class Cuentas
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Cuentas"
         Me.Text = "Cuentas"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -116,4 +142,5 @@ Partial Class Cuentas
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
