@@ -63,3 +63,4 @@ D:\Documentos\github\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\K4os.Ha
 D:\Documentos\github\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\MySql.Data.xml
 D:\Documentos\github\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\MySql.Data.EntityFramework.xml
 D:\Documentos\github\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\MySql.Web.xml
+D:\Documentos\github\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.Facturacion.resources

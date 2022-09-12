@@ -21,7 +21,7 @@ Public Class Inventario
         conn = objetoconexion.AbrirCon
         Try
             cmd = conn.CreateCommand
-            cmd.CommandText = "INSERT INTO inventario(producto, cantidad, precio) VALUES ( '" & TextBox1.Text & "', '" & NumericUpDown1.Value & "', '" & TextBox3.Text & "');"
+            cmd.CommandText = "INSERT INTO inventario(producto, cantidad, precio, codigo) VALUES ( '" & TextBox1.Text & "', '" & NumericUpDown1.Value & "', '" & TextBox3.Text & "', '" & TextBox2.Text & "');"
 
             cmd.ExecuteNonQuery()
             conn.Close()
@@ -29,6 +29,7 @@ Public Class Inventario
             TextBox1.Clear()
             NumericUpDown1.Value = 0
             TextBox3.Clear()
+            TextBox2.Clear()
             mostrar()
         Catch ex As Exception
 
@@ -38,9 +39,10 @@ Public Class Inventario
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         Dim row As DataGridViewRow = DataGridView1.CurrentRow
         Try
-            TextBox1.Text = row.Cells(0).Value.ToString()
-            NumericUpDown1.Text = row.Cells(1).Value.ToString()
-            TextBox3.Text = row.Cells(2).Value.ToString()
+            TextBox1.Text = row.Cells(1).Value.ToString()
+            NumericUpDown1.Text = row.Cells(2).Value.ToString()
+            TextBox3.Text = row.Cells(3).Value.ToString()
+            TextBox2.Text = row.Cells(4).Value.ToString()
         Catch ex As Exception
 
         End Try
@@ -50,7 +52,8 @@ Public Class Inventario
         conn = objetoconexion.AbrirCon
         Try
             cmd = conn.CreateCommand
-            cmd.CommandText = "UPDATE inventario SET producto =@nom, cantidad =@can, precio=@prec WHERE id_producto =@cod"
+            cmd.CommandText = "UPDATE inventario SET nombre =@nom, cantidad =@can, precio =@prec WHERE codigo =@cod"
+            cmd.Parameters.AddWithValue("@cod", TextBox2.Text)
             cmd.Parameters.AddWithValue("@nom", TextBox1.Text)
             cmd.Parameters.AddWithValue("@can", NumericUpDown1.Text)
             cmd.Parameters.AddWithValue("@prec", TextBox3.Text)
@@ -60,6 +63,8 @@ Public Class Inventario
             TextBox1.Clear()
             NumericUpDown1.Value = 0
             TextBox3.Clear()
+            TextBox2.Clear()
+
         Catch ex As Exception
 
         End Try
@@ -70,8 +75,8 @@ Public Class Inventario
 
         Try
             cmd = conn.CreateCommand
-            cmd.CommandText = "delete from inventario where producto =@nom"
-            cmd.Parameters.AddWithValue("@nom", TextBox1.Text)
+            cmd.CommandText = "delete from inventario where codigo =@cod"
+            cmd.Parameters.AddWithValue("@cod", TextBox2.Text)
             cmd.ExecuteNonQuery()
             mostrar()
 
@@ -80,6 +85,7 @@ Public Class Inventario
             TextBox1.Clear()
             NumericUpDown1.Value = 0
             TextBox3.Clear()
+            TextBox2.Clear()
         Catch ex As Exception
 
         End Try
