@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Facturacion
+Partial Class Ventas
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -33,6 +33,7 @@ Partial Class Facturacion
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,7 +117,7 @@ Partial Class Facturacion
         '
         Me.Button1.BackColor = System.Drawing.Color.Lavender
         Me.Button1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(175, 430)
+        Me.Button1.Location = New System.Drawing.Point(36, 434)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(174, 60)
         Me.Button1.TabIndex = 8
@@ -133,12 +134,24 @@ Partial Class Facturacion
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Facturación"
         '
-        'Facturacion
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Lavender
+        Me.Button2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(277, 434)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(174, 60)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Salir"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.ClientSize = New System.Drawing.Size(494, 535)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
@@ -149,7 +162,7 @@ Partial Class Facturacion
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Facturacion"
+        Me.Name = "Ventas"
         Me.Text = "Facturacion"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -169,4 +182,5 @@ Partial Class Facturacion
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button2 As Button
 End Class

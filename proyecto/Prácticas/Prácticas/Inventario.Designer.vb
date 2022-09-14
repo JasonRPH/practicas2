@@ -35,6 +35,7 @@ Partial Class Inventario
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -167,12 +168,24 @@ Partial Class Inventario
         Me.TextBox2.Size = New System.Drawing.Size(132, 28)
         Me.TextBox2.TabIndex = 13
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Azure
+        Me.Button4.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(725, 325)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(84, 49)
+        Me.Button4.TabIndex = 15
+        Me.Button4.Text = "Salir"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
         Me.ClientSize = New System.Drawing.Size(846, 396)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label4)
@@ -210,4 +223,5 @@ Partial Class Inventario
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button4 As Button
 End Class

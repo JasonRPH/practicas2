@@ -26,6 +26,7 @@ Partial Class Seleccion_de_modulo
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -72,12 +73,24 @@ Partial Class Seleccion_de_modulo
         Me.Button4.Text = "Cuentas"
         Me.Button4.UseVisualStyleBackColor = False
         '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Azure
+        Me.Button5.Font = New System.Drawing.Font("Rockwell", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(125, 233)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(85, 43)
+        Me.Button5.TabIndex = 4
+        Me.Button5.Text = "Salir"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'Seleccion_de_modulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.ClientSize = New System.Drawing.Size(347, 271)
+        Me.ClientSize = New System.Drawing.Size(347, 329)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -94,4 +107,5 @@ Partial Class Seleccion_de_modulo
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class
