@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bancos.Designer.vb">
+      <DependentUpon>Bancos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="clientes.Designer.vb">
       <DependentUpon>clientes.vb</DependentUpon>
     </Compile>
@@ -92,9 +98,7 @@
     <Compile Include="Facturacion.Designer.vb">
       <DependentUpon>Facturacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +147,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Bancos.resx">
+      <DependentUpon>Bancos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.vb</DependentUpon>
     </EmbeddedResource>
