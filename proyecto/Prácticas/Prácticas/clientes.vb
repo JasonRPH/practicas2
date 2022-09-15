@@ -19,7 +19,7 @@ Public Class clientes
     End Sub
     Private Sub conectar()
 
-        Dim squery As String = "SELECT codigo_cliente, nombre,direccion, telefono,nit "
+        Dim squery As String = "SELECT codigo_cliente, nombre,direccion, telefono,nit from clientes "
         Dim adpt As New MySqlDataAdapter(squery, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
@@ -54,7 +54,7 @@ Public Class clientes
             conn.Open()
         End If
 
-        Dim cmd As New MySqlCommand("INSERT INTO (codigo_cliente, nombre,direccion,telefono nit) VALUES ('" & Me.TextBox4.Text & "','" & Me.TextBox1.Text & "', '" & Me.TextBox2.Text & "', '" & Me.TextBox3.Text & "', '" & Me.TextBox5.Text & "')", conn)
+        Dim cmd As New MySqlCommand("INSERT  INTO clientes (nombre,direccion,telefono, nit) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox5.Text & "')", conn)
 
 
         cmd.ExecuteNonQuery()
@@ -71,13 +71,14 @@ Public Class clientes
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        codigo_cliente(contador_clientes) = TextBox4.Text
-        nombre_cliente(contador_clientes) = TextBox1.Text
-        direccion_cliente(contador_clientes) = TextBox2.Text
-        telefono_cliente(contador_clientes) = TextBox3.Text
-        nit_cliente(contador_clientes) = TextBox5.Text
-        contador_clientes += 1
-        MsgBox(" Buscando cliente")
+
+        Dim squery As String = "SELECT * FROM clientes"
+        Dim adpt As New MySqlDataAdapter(squery, conn)
+        Dim ds As New DataSet()
+        adpt.Fill(ds)
+        DataGridView1.DataSource = ds.Tables(0)
+        conn.Close()
+        conn.Dispose()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -89,16 +90,14 @@ Public Class clientes
         If conn.State = ConnectionState.Closed Then
             conn.Open()
         End If
-        Dim cmd1 As New MySqlCommand("UPDATE SET codigo_cliente = '" & TextBox4.Text & "' WHERE cod_clientes = " & TextBox4.Text, conn)
+        Dim cmd1 As New MySqlCommand("UPDATE clientes SET nombre = '" & TextBox1.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd1.ExecuteNonQuery()
-        Dim cmd2 As New MySqlCommand("UPDATE SET nombre = '" & TextBox1.Text & "' WHERE cod_clientes = " & TextBox4.Text, conn)
+        Dim cmd2 As New MySqlCommand("UPDATE clientes SET direccion = '" & TextBox2.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd2.ExecuteNonQuery()
-        Dim cmd3 As New MySqlCommand("UPDATE SET direccion = '" & TextBox2.Text & "' WHERE cod_clientes = " & TextBox4.Text, conn)
+        Dim cmd3 As New MySqlCommand("UPDATE clientes SET telefono = '" & TextBox3.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd3.ExecuteNonQuery()
-        Dim cmd4 As New MySqlCommand("UPDATE SET telefono = '" & TextBox3.Text & "' WHERE cod_clientes = " & TextBox4.Text, conn)
+        Dim cmd4 As New MySqlCommand("UPDATE clientes SET nit = '" & TextBox5.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd4.ExecuteNonQuery()
-        Dim cmd5 As New MySqlCommand("UPDATE SET nit = '" & TextBox5.Text & "' WHERE cod_clientes = " & TextBox4.Text, conn)
-        cmd5.ExecuteNonQuery()
         conectar()
         limpiar()
         conn.Close()
@@ -109,18 +108,16 @@ Public Class clientes
             conn.Open()
         End If
 
-        Dim cmd1 As New MySqlCommand("DELETE  SET codigo_cliente = '" & TextBox4.Text & "' WHERE id_cliente = " & TextBox4.Text, conn)
+        Dim cmd1 As New MySqlCommand("DELETE clientes SET nombre = '" & TextBox1.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd1.ExecuteNonQuery()
-        Dim cmd2 As New MySqlCommand("DELETE medicina SET nombre = '" & TextBox1.Text & "' WHERE id_cliente = " & TextBox4.Text, conn)
+        Dim cmd2 As New MySqlCommand("DELETE clientes SET direccion = '" & TextBox2.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd2.ExecuteNonQuery()
-        Dim cmd3 As New MySqlCommand("DELETE medicina SET direccion = '" & TextBox2.Text & "' WHERE id_cliente = " & TextBox4.Text, conn)
+        Dim cmd3 As New MySqlCommand("DELETE clientes SET telefono = '" & TextBox3.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd3.ExecuteNonQuery()
-        Dim cmd4 As New MySqlCommand("DELETE medicina SET telefono = '" & TextBox3.Text & "' WHERE id_cliente = " & TextBox4.Text, conn)
+        Dim cmd4 As New MySqlCommand("DELETE clientes SET nit = '" & TextBox5.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd4.ExecuteNonQuery()
-        Dim cmd5 As New MySqlCommand("DELETE medicina SET Nit = '" & TextBox5.Text & "' WHERE id_cliente = " & TextBox4.Text, conn)
-        cmd5.ExecuteNonQuery()
         'cmd = conn.CreateCommand
-        'cmd.CommandText = "DELITE FROM cliente where id_cliente=@cod"
+        'cmd.CommandText = "DELITE FROM clientes where codigo_cliente=@cod"
 
         conectar()
         conn.Close()
@@ -130,6 +127,10 @@ Public Class clientes
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim row As DataGridViewRow = DataGridView1.CurrentRow
 
         TextBox4.Text = row.Cells(0).Value.ToString()

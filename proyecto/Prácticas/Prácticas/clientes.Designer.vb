@@ -128,18 +128,18 @@ Partial Class clientes
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(-3, 247)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(879, 188)
+        Me.DataGridView1.Size = New System.Drawing.Size(647, 188)
         Me.DataGridView1.TabIndex = 10
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(515, 115)
+        Me.Button1.Location = New System.Drawing.Point(459, 164)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(83, 34)
+        Me.Button1.Size = New System.Drawing.Size(83, 36)
         Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Guardar"
+        Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'PictureBox1
@@ -147,7 +147,7 @@ Partial Class clientes
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(-3, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(879, 435)
+        Me.PictureBox1.Size = New System.Drawing.Size(812, 435)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
@@ -156,29 +156,29 @@ Partial Class clientes
         '
         Me.Button2.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(604, 117)
+        Me.Button2.Location = New System.Drawing.Point(548, 164)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(83, 31)
+        Me.Button2.Size = New System.Drawing.Size(83, 33)
         Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Nuevo"
+        Me.Button2.Text = "Actualizar"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(782, 117)
+        Me.Button3.Location = New System.Drawing.Point(726, 162)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(83, 35)
         Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Eliminar"
+        Me.Button3.Text = "borrar"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(693, 117)
+        Me.Button4.Location = New System.Drawing.Point(637, 162)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(83, 35)
         Me.Button4.TabIndex = 15
@@ -189,7 +189,7 @@ Partial Class clientes
         '
         Me.Button5.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button5.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(433, 113)
+        Me.Button5.Location = New System.Drawing.Point(377, 164)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(76, 36)
         Me.Button5.TabIndex = 16
@@ -219,7 +219,7 @@ Partial Class clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(877, 429)
+        Me.ClientSize = New System.Drawing.Size(807, 429)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button5)
