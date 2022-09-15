@@ -38,6 +38,8 @@ Partial Class clientes
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +49,7 @@ Partial Class clientes
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 20)
+        Me.Label1.Location = New System.Drawing.Point(12, 58)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(66, 23)
         Me.Label1.TabIndex = 0
@@ -81,7 +83,7 @@ Partial Class clientes
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(7, 63)
+        Me.Label5.Location = New System.Drawing.Point(3, 100)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 23)
         Me.Label5.TabIndex = 4
@@ -91,7 +93,7 @@ Partial Class clientes
         '
         Me.TextBox1.BackColor = System.Drawing.Color.PowderBlue
         Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(95, 22)
+        Me.TextBox1.Location = New System.Drawing.Point(96, 61)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(263, 20)
         Me.TextBox1.TabIndex = 5
@@ -100,7 +102,7 @@ Partial Class clientes
         '
         Me.TextBox2.BackColor = System.Drawing.Color.PowderBlue
         Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(95, 63)
+        Me.TextBox2.Location = New System.Drawing.Point(96, 105)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(263, 20)
         Me.TextBox2.TabIndex = 6
@@ -194,11 +196,32 @@ Partial Class clientes
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(7, 13)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(108, 23)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Codigo cliente"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.PowderBlue
+        Me.TextBox4.Location = New System.Drawing.Point(133, 16)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(226, 20)
+        Me.TextBox4.TabIndex = 18
+        '
         'clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(877, 429)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -238,4 +261,6 @@ Partial Class clientes
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox4 As TextBox
 End Class

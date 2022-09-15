@@ -1,4 +1,5 @@
 ﻿Imports System.Runtime.InteropServices
+Imports MySql.Data
 Imports MySql.Data.MySqlClient
 Public Class Form1
     Dim conexion As MySqlConnection = New MySqlConnection
