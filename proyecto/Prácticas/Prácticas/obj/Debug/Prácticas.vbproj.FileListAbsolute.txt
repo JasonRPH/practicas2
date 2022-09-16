@@ -93,3 +93,5 @@ C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\bin
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\MySql.Data.xml
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\MySql.Data.EntityFramework.xml
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\MySql.Web.xml
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Interop.ADODB.dll
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.vbproj.ResolveComReference.cache

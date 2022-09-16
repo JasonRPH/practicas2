@@ -192,7 +192,7 @@ Partial Class clientes
         Me.Button5.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(105, 162)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(116, 36)
+        Me.Button5.Size = New System.Drawing.Size(76, 35)
         Me.Button5.TabIndex = 16
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = False

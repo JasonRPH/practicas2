@@ -6,7 +6,7 @@ Public Class Cuentas
     Public saldo_cuentas(20) As String
     Public creditos_cuentas(20) As String
     Public debitos_cuentas(20) As String
-    Public contador_cuentass As Integer
+    Public contador_cuentas As Integer
     Dim CadenaConexion = "Server = localhost;Database=practicas;User id=root;Password=;Port=3306;"
     Dim conn As New MySqlConnection(CadenaConexion)
     Dim cmd As MySqlCommand
@@ -18,7 +18,7 @@ Public Class Cuentas
     End Sub
     Private Sub conectar()
 
-        Dim squery As String = "SELECT codigo_cliente, nombre,direccion, telefono,nit from clientes "
+        Dim squery As String = "SELECT cuenta_bancarias,creditos,saldo, debito from bancos "
         Dim adpt As New MySqlDataAdapter(squery, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
@@ -27,8 +27,9 @@ Public Class Cuentas
         conn.Dispose()
     End Sub
     Private Sub limpiar()
-        NumericUpDown1.Text = ""
         TextBox1.Text = ""
+        NumericUpDown1.Text = ""
         TextBox3.Text = ""
+        NumericUpDown2.Text = ""
     End Sub
 End Class

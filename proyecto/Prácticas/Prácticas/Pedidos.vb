@@ -4,32 +4,46 @@ Imports System.Configuration
 Public Class Pedidos
     Public codigo_pedido(20) As String
     Public codigo_cliente(20) As String
-    Public direccion_pedido(20) As String
-    Public producto_pedido(20) As String
     Public fecha_pedido(20) As Integer
+    Public producto_pedido(20) As String
     Public precio_pedido(20) As Integer
     Public cantidad_pedido(20) As Integer
+    Public total_pedido(20) As Integer
     Public contador_pedido As Integer
     Dim CadenaConexion = "Server = localhost;Database=practicas;User id=root;Password=;Port=3306;"
     Dim conn As New MySqlConnection(CadenaConexion)
     Dim cmd As MySqlCommand
 
     Private Sub Pedidos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim CadenaConexion = "Driver={MySQL ODBC 5.3 ANSI Driver};Server=127.0.0.1;Database=practicas;User=root;Password=;Option=3;"
+        Dim cnn As New ADODB.Connection
+        Dim rs As New ADODB.Recordset
+
+        cnn.Open(CadenaConexion)
+        rs.Open("SELECT codigo_cliente from clientes ", cnn, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockReadOnly)
+        While Not rs.EOF
+            ComboBox3.Items.Add(rs.Fields(0).Value)
+            rs.MoveNext()
+        End While
+        rs.Close()
+        rs.Open("SELECT id_inventario from inventario ", cnn, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockReadOnly)
+        While Not rs.EOF
+            ComboBox1.Items.Add(rs.Fields(0).Value)
+            rs.MoveNext()
+        End While
+        rs.Close()
+        cnn.Close()
+
         If conn.State = ConnectionState.Closed Then
             conn.Open()
         End If
         Call conectar()
-        Dim squery As String = "SELECT codigo_cliente from clientes "
 
-        Dim adpt As New MySqlDataAdapter(squery, conn)
-        Dim ds As New DataSet()
-        adpt.Fill(ds)
-        ComboBox3.DataSource = ds.Tables(0).
 
     End Sub
     Private Sub conectar()
 
-        Dim squery As String = "SELECT codigo_pedido, codigo_cliente,direccion,producto,fecha_pedido,precio,cantidad from pedidos "
+        Dim squery As String = "SELECT codigo_pedido, codigo_cliente,fecha_pedido,producto,precio,cantidad,total from pedidos "
         Dim adpt As New MySqlDataAdapter(squery, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
@@ -40,11 +54,11 @@ Public Class Pedidos
     Private Sub limpiar()
         TextBox3.Text = ""
         ComboBox3.Text = ""
-        TextBox1.Text = ""
         DateTimePicker1.Text = ""
-        ComboBox2.Text = ""
-        NumericUpDown1.Text = ""
         ComboBox1.Text = ""
+        TextPrecio.Text = ""
+        TextCantidad.Text = ""
+        Texttotal.Text = ""
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -65,7 +79,7 @@ Public Class Pedidos
             conn.Open()
         End If
 
-        '        ´´Dim cmd As New MySqlCommand("INSERT  INTO pedidos (codigo_cliente,nombre_cliente ,direccion,nit,producto,fecha_pedido,precio,cantidad) VALUES ('" & combobox3.Text & "', '" & TextBox1.Text & "', '" & datetimepicker1.Text & "', '" & combobox2.Text & "','" & numericupdown1.Text & "','" & combobox1.Text & "')", conn)
+        Dim cmd As New MySqlCommand("INSERT  INTO pedidos (codigo_cliente,fecha_pedido,producto,precio,cantidad,total) VALUES ('" & ComboBox3.Text & "', '" & DateTimePicker1.Text & "', '" & ComboBox1.Text & "','" & TextPrecio.Text & "','" & TextCantidad.Text & "','" & Texttotal.Text & "')", conn)
 
 
 
@@ -86,30 +100,23 @@ Public Class Pedidos
         If conn.State = ConnectionState.Closed Then
             conn.Open()
         End If
-        'Dim cmd1 As New MySqlCommand("UPDATE pedidos SET codigo_cliente = '" & textbox3.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
-        'cmd1.ExecuteNonQuery()
-        Dim cmd2 As New MySqlCommand("UPDATE pedidos SET nombre_cliente = '" & ComboBox3.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
+        Dim cmd1 As New MySqlCommand("UPDATE pedidos SET codigo_cliente = '" & ComboBox3.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
+        cmd1.ExecuteNonQuery()
+        Dim cmd2 As New MySqlCommand("UPDATE pedidos SET fecha_pedido = '" & DateTimePicker1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd2.ExecuteNonQuery()
-        Dim cmd3 As New MySqlCommand("UPDATE pedidos SET direccion = '" & TextBox1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
+        Dim cmd3 As New MySqlCommand("UPDATE pedidos SET producto = '" & ComboBox1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd3.ExecuteNonQuery()
-        'Dim cmd1 As New MySqlCommand("UPDATE pedidos SET nit = '" & datetimepicker1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
-        'cmd1.ExecuteNonQuery()
-        Dim cmd2 As New MySqlCommand("UPDATE pedidos SET direccion = '" & TextBox1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
-        cmd2.ExecuteNonQuery()
-        Dim cmd3 As New MySqlCommand("UPDATE pedidos SET producto = '" & DateTimePicker1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
-        cmd3.ExecuteNonQuery()
-        Dim cmd4 As New MySqlCommand("UPDATE pedidos SET fecha_pedido = '" & ComboBox2.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
+        Dim cmd4 As New MySqlCommand("UPDATE pedidos SET precio = '" & TextPrecio.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd4.ExecuteNonQuery()
-        Dim cmd5 As New MySqlCommand("UPDATE pedidos SET precio = '" & NumericUpDown1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
+        Dim cmd5 As New MySqlCommand("UPDATE pedidos SET cantidad = '" & TextCantidad.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd5.ExecuteNonQuery()
-        Dim cmd6 As New MySqlCommand("UPDATE pedidos SET cantidad = '" & ComboBox1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
+        Dim cmd6 As New MySqlCommand("UPDATE pedidos SET total = '" & Texttotal.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd6.ExecuteNonQuery()
         conectar()
         limpiar()
         conn.Close()
         conn.Dispose()
     End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If conn.State = ConnectionState.Closed Then
             conn.Open()
@@ -132,10 +139,46 @@ Public Class Pedidos
 
         TextBox3.Text = row.Cells(1).Value.ToString()
         ComboBox3.Text = row.Cells(2).Value.ToString()
-        TextBox1.Text = row.Cells(1).Value.ToString()
-        DateTimePicker1.Text = row.Cells(3).Value.ToString()
-        ComboBox2.Text = row.Cells(4).Value.ToString()
-        NumericUpDown1.Text = row.Cells(5).Value.ToString()
-        ComboBox1.Text = row.Cells(2).Value.ToString()
+        DateTimePicker1.Text = row.Cells(4).Value.ToString()
+        ComboBox1.Text = row.Cells(5).Value.ToString()
+        TextPrecio.Text = row.Cells(6).Value.ToString()
+        TextCantidad.Text = row.Cells(7).Value.ToString()
+        Texttotal.Text = row.Cells(8).Value.ToString()
+    End Sub
+
+    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
+        Dim CadenaConexion = "Driver={MySQL ODBC 5.3 ANSI Driver};Server=127.0.0.1;Database=practicas;User=root;Password=;Option=3;"
+        Dim cnn As New ADODB.Connection
+        Dim rs As New ADODB.Recordset
+
+        cnn.Open(CadenaConexion)
+        rs.Open("SELECT * from clientes where codigo_cliente = " & ComboBox3.Text, cnn, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockReadOnly)
+        If Not rs.EOF Then
+            Label8.Text = rs.Fields("nombre").Value
+            Label9.Text = rs.Fields("nit").Value
+            Label10.Text = rs.Fields("direccion").Value
+        End If
+        rs.Close()
+        cnn.Close()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim CadenaConexion = "Driver={MySQL ODBC 5.3 ANSI Driver};Server=127.0.0.1;Database=practicas;User=root;Password=;Option=3;"
+        Dim cnn As New ADODB.Connection
+        Dim rs As New ADODB.Recordset
+
+        cnn.Open(CadenaConexion)
+        rs.Open("SELECT * from inventario where id_inventario = " & ComboBox1.Text, cnn, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockReadOnly)
+        If Not rs.EOF Then
+            Label1.Text = rs.Fields("producto").Value
+            TextPrecio.Text = rs.Fields("precio").Value
+            TextCantidad.Focus()
+        End If
+        rs.Close()
+        cnn.Close()
+    End Sub
+
+    Private Sub TextCantidad_TextChanged(sender As Object, e As EventArgs) Handles TextCantidad.TextChanged
+        Texttotal.Text = TextCantidad.Text * TextPrecio.Text
     End Sub
 End Class

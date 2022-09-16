@@ -34,6 +34,8 @@ Partial Class Cuentas
         Me.Label4 = New System.Windows.Forms.Label()
         Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,11 +76,11 @@ Partial Class Cuentas
         '
         Me.Button1.BackColor = System.Drawing.Color.PowderBlue
         Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(312, 99)
+        Me.Button1.Location = New System.Drawing.Point(524, 15)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(184, 35)
+        Me.Button1.Size = New System.Drawing.Size(79, 35)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Generar orden de pago"
+        Me.Button1.Text = "Ingresar"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label3
@@ -113,7 +115,7 @@ Partial Class Cuentas
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(-1, -3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(621, 355)
+        Me.PictureBox1.Size = New System.Drawing.Size(643, 364)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
@@ -123,7 +125,7 @@ Partial Class Cuentas
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(308, 59)
+        Me.Label4.Location = New System.Drawing.Point(308, 65)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(62, 23)
         Me.Label4.TabIndex = 9
@@ -132,7 +134,7 @@ Partial Class Cuentas
         'NumericUpDown2
         '
         Me.NumericUpDown2.BackColor = System.Drawing.Color.SkyBlue
-        Me.NumericUpDown2.Location = New System.Drawing.Point(376, 59)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(376, 65)
         Me.NumericUpDown2.Name = "NumericUpDown2"
         Me.NumericUpDown2.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown2.TabIndex = 10
@@ -140,16 +142,40 @@ Partial Class Cuentas
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(-1, 174)
+        Me.DataGridView1.Location = New System.Drawing.Point(-1, 177)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(497, 164)
+        Me.DataGridView1.Size = New System.Drawing.Size(511, 184)
         Me.DataGridView1.TabIndex = 11
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.PowderBlue
+        Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(524, 68)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(94, 32)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "Actualizar"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.PowderBlue
+        Me.Button3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(524, 117)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(79, 30)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Borrar"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Cuentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(615, 342)
+        Me.ClientSize = New System.Drawing.Size(642, 359)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.NumericUpDown2)
         Me.Controls.Add(Me.Label4)
@@ -183,4 +209,6 @@ Partial Class Cuentas
     Friend WithEvents Label4 As Label
     Friend WithEvents NumericUpDown2 As NumericUpDown
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

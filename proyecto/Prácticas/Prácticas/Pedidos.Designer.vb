@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Pedidos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Pedidos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pedidos))
         Me.Label2 = New System.Windows.Forms.Label()
@@ -33,20 +33,21 @@ Partial Class Pedidos
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextPrecio = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Texttotal = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextCantidad = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -54,7 +55,7 @@ Partial Class Pedidos
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Azure
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(418, 51)
+        Me.Label2.Location = New System.Drawing.Point(418, 123)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(54, 23)
         Me.Label2.TabIndex = 1
@@ -65,7 +66,7 @@ Partial Class Pedidos
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Azure
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(418, 90)
+        Me.Label3.Location = New System.Drawing.Point(418, 157)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 23)
         Me.Label3.TabIndex = 2
@@ -123,8 +124,9 @@ Partial Class Pedidos
         Me.DateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.LightSkyBlue
         Me.DateTimePicker1.Location = New System.Drawing.Point(544, 12)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(195, 20)
         Me.DateTimePicker1.TabIndex = 11
+        Me.DateTimePicker1.Value = New Date(2022, 9, 16, 8, 35, 3, 0)
         '
         'Label6
         '
@@ -148,25 +150,17 @@ Partial Class Pedidos
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(-1, 194)
+        Me.DataGridView1.Location = New System.Drawing.Point(-1, 238)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(723, 236)
+        Me.DataGridView1.Size = New System.Drawing.Size(694, 192)
         Me.DataGridView1.TabIndex = 14
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.NumericUpDown1.Location = New System.Drawing.Point(522, 96)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown1.TabIndex = 15
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Azure
         Me.Label7.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(418, 136)
+        Me.Label7.Location = New System.Drawing.Point(418, 52)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 23)
         Me.Label7.TabIndex = 16
@@ -177,7 +171,7 @@ Partial Class Pedidos
         Me.ComboBox1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Garrafones", "Bolsas"})
-        Me.ComboBox1.Location = New System.Drawing.Point(522, 136)
+        Me.ComboBox1.Location = New System.Drawing.Point(545, 57)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 17
@@ -203,15 +197,6 @@ Partial Class Pedidos
         Me.Button3.TabIndex = 19
         Me.Button3.Text = "Borrar"
         Me.Button3.UseVisualStyleBackColor = False
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(522, 53)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 20
         '
         'Label8
         '
@@ -255,30 +240,70 @@ Partial Class Pedidos
         Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox3.TabIndex = 24
         '
-        'TextBox1
+        'TextPrecio
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.TextBox1.Location = New System.Drawing.Point(149, 128)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(240, 20)
-        Me.TextBox1.TabIndex = 25
+        Me.TextPrecio.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextPrecio.Location = New System.Drawing.Point(545, 123)
+        Me.TextPrecio.Name = "TextPrecio"
+        Me.TextPrecio.Size = New System.Drawing.Size(120, 20)
+        Me.TextPrecio.TabIndex = 25
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Azure
+        Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(418, 90)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(72, 23)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Producto"
+        '
+        'Texttotal
+        '
+        Me.Texttotal.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Texttotal.Location = New System.Drawing.Point(544, 199)
+        Me.Texttotal.Name = "Texttotal"
+        Me.Texttotal.Size = New System.Drawing.Size(120, 20)
+        Me.Texttotal.TabIndex = 28
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Azure
+        Me.Label11.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(418, 194)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(43, 23)
+        Me.Label11.TabIndex = 27
+        Me.Label11.Text = "Total"
+        '
+        'TextCantidad
+        '
+        Me.TextCantidad.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextCantidad.Location = New System.Drawing.Point(544, 162)
+        Me.TextCantidad.Name = "TextCantidad"
+        Me.TextCantidad.Size = New System.Drawing.Size(120, 20)
+        Me.TextCantidad.TabIndex = 29
         '
         'Pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(899, 428)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextCantidad)
+        Me.Controls.Add(Me.Texttotal)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextPrecio)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.button2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label6)
@@ -293,7 +318,6 @@ Partial Class Pedidos
         Me.Text = "Pedidos"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -308,15 +332,17 @@ Partial Class Pedidos
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Label7 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextPrecio As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Texttotal As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TextCantidad As TextBox
 End Class
