@@ -135,7 +135,7 @@ Partial Class clientes
         '
         Me.Button1.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(459, 164)
+        Me.Button1.Location = New System.Drawing.Point(494, 164)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(83, 36)
         Me.Button1.TabIndex = 11
@@ -156,45 +156,47 @@ Partial Class clientes
         '
         Me.Button2.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(548, 164)
+        Me.Button2.Location = New System.Drawing.Point(16, 162)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(83, 33)
         Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Actualizar"
+        Me.Button2.Text = "Ingresar"
         Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.Visible = False
         '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(726, 162)
+        Me.Button3.Location = New System.Drawing.Point(691, 162)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(83, 35)
         Me.Button3.TabIndex = 14
-        Me.Button3.Text = "borrar"
+        Me.Button3.Text = "Borrar"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(637, 162)
+        Me.Button4.Location = New System.Drawing.Point(596, 164)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(83, 35)
+        Me.Button4.Size = New System.Drawing.Size(89, 35)
         Me.Button4.TabIndex = 15
-        Me.Button4.Text = "Modificar"
+        Me.Button4.Text = "Actualizar"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Button5.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(377, 164)
+        Me.Button5.Location = New System.Drawing.Point(105, 162)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(76, 36)
+        Me.Button5.Size = New System.Drawing.Size(116, 36)
         Me.Button5.TabIndex = 16
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = False
+        Me.Button5.Visible = False
         '
         'Label4
         '

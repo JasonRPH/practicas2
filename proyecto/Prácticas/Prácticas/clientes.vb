@@ -108,16 +108,9 @@ Public Class clientes
             conn.Open()
         End If
 
-        Dim cmd1 As New MySqlCommand("DELETE clientes SET nombre = '" & TextBox1.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
+        Dim cmd1 As New MySqlCommand("DELETE from clientes WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd1.ExecuteNonQuery()
-        Dim cmd2 As New MySqlCommand("DELETE clientes SET direccion = '" & TextBox2.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
-        cmd2.ExecuteNonQuery()
-        Dim cmd3 As New MySqlCommand("DELETE clientes SET telefono = '" & TextBox3.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
-        cmd3.ExecuteNonQuery()
-        Dim cmd4 As New MySqlCommand("DELETE clientes SET nit = '" & TextBox5.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
-        cmd4.ExecuteNonQuery()
-        'cmd = conn.CreateCommand
-        'cmd.CommandText = "DELITE FROM clientes where codigo_cliente=@cod"
+
 
         conectar()
         conn.Close()
