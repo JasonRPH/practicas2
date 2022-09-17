@@ -68,7 +68,6 @@ C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.vbproj.Prácticas.exe.config
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.clientes.resources
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.Cuentas.resources
-C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.Facturacion.resources
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.Form1.resources
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.Inventario.resources
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.Resources.resources
@@ -95,3 +94,5 @@ C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\bin
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\bin\Debug\MySql.Web.xml
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Interop.ADODB.dll
 C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.vbproj.ResolveComReference.cache
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.movimiento.resources
+C:\Users\Mauricio\Documents\GitHub\practicas2\proyecto\Prácticas\Prácticas\obj\Debug\Prácticas.Control_Ventas.resources

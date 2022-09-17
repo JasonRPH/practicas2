@@ -37,6 +37,7 @@ Partial Class Cuentas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -178,11 +179,23 @@ Partial Class Cuentas
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
         Me.TextBox4.TabIndex = 16
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.PowderBlue
+        Me.Button4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(524, 164)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(79, 30)
+        Me.Button4.TabIndex = 17
+        Me.Button4.Text = "Salir"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Cuentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(642, 359)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label5)
@@ -220,4 +233,5 @@ Partial Class Cuentas
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Button4 As Button
 End Class

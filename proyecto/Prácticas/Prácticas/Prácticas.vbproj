@@ -83,16 +83,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conexion.vb" />
+    <Compile Include="Control Ventas.Designer.vb">
+      <DependentUpon>Control Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cuentas.Designer.vb">
       <DependentUpon>Cuentas.vb</DependentUpon>
     </Compile>
     <Compile Include="Cuentas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Facturacion.Designer.vb">
-      <DependentUpon>Facturacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Facturacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -106,6 +106,12 @@
       <DependentUpon>Inventario.vb</DependentUpon>
     </Compile>
     <Compile Include="Inventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="movimiento.Designer.vb">
+      <DependentUpon>movimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="movimiento.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -146,17 +152,20 @@
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control Ventas.resx">
+      <DependentUpon>Control Ventas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cuentas.resx">
       <DependentUpon>Cuentas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Facturacion.resx">
-      <DependentUpon>Facturacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movimiento.resx">
+      <DependentUpon>movimiento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

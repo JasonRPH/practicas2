@@ -4,11 +4,6 @@
         Me.Hide()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Facturacion.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Pedidos.Show()
         Me.Hide()
@@ -21,6 +16,16 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         clientes.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        movimiento.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Control_Ventas.Show()
         Me.Hide()
     End Sub
 End Class
