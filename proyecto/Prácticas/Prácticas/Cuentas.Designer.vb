@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Cuentas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Cuentas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Cuentas))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -29,16 +29,15 @@ Partial Class Cuentas
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,7 +55,7 @@ Partial Class Cuentas
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.TextBox1.Location = New System.Drawing.Point(168, 17)
+        Me.TextBox1.Location = New System.Drawing.Point(169, 17)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(120, 20)
         Me.TextBox1.TabIndex = 1
@@ -88,7 +87,7 @@ Partial Class Cuentas
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.PowderBlue
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 12)
+        Me.Label3.Location = New System.Drawing.Point(12, 15)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(141, 23)
         Me.Label3.TabIndex = 5
@@ -101,14 +100,6 @@ Partial Class Cuentas
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(120, 20)
         Me.TextBox3.TabIndex = 6
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.NumericUpDown1.Location = New System.Drawing.Point(168, 65)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown1.TabIndex = 7
         '
         'PictureBox1
         '
@@ -130,14 +121,6 @@ Partial Class Cuentas
         Me.Label4.Size = New System.Drawing.Size(62, 23)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Debitos"
-        '
-        'NumericUpDown2
-        '
-        Me.NumericUpDown2.BackColor = System.Drawing.Color.SkyBlue
-        Me.NumericUpDown2.Location = New System.Drawing.Point(376, 65)
-        Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown2.TabIndex = 10
         '
         'DataGridView1
         '
@@ -169,17 +152,44 @@ Partial Class Cuentas
         Me.Button3.Text = "Borrar"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.PowderBlue
+        Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(12, -3)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 23)
+        Me.Label5.TabIndex = 14
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox2.Location = New System.Drawing.Point(169, 67)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 15
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox4.Location = New System.Drawing.Point(387, 67)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 16
+        '
         'Cuentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(642, 359)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.NumericUpDown2)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button1)
@@ -189,9 +199,7 @@ Partial Class Cuentas
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Cuentas"
         Me.Text = "Cuentas"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -204,11 +212,12 @@ Partial Class Cuentas
     Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents NumericUpDown2 As NumericUpDown
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox4 As TextBox
 End Class

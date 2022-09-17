@@ -75,11 +75,12 @@ Public Class Pedidos
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim fecha As Date
         If conn.State = ConnectionState.Closed Then
             conn.Open()
         End If
-
-        Dim cmd As New MySqlCommand("INSERT  INTO pedidos (codigo_cliente,fecha_pedido,producto,precio,cantidad,total) VALUES ('" & ComboBox3.Text & "', '" & DateTimePicker1.Text & "', '" & ComboBox1.Text & "','" & TextPrecio.Text & "','" & TextCantidad.Text & "','" & Texttotal.Text & "')", conn)
+        fecha = DateTimePicker1.Value
+        Dim cmd As New MySqlCommand("INSERT  INTO pedidos (codigo_cliente,fecha_pedido,producto,precio,cantidad,total) VALUES ('" & ComboBox3.Text & "', '" & fecha.Year & "-" & fecha.Month & "-" & fecha.Day & "', '" & ComboBox1.Text & "','" & TextPrecio.Text & "','" & TextCantidad.Text & "','" & Texttotal.Text & "')", conn)
 
 
 
@@ -97,12 +98,14 @@ Public Class Pedidos
     End Sub
 
     Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
+        Dim fecha As Date
         If conn.State = ConnectionState.Closed Then
             conn.Open()
         End If
+        fecha = DateTimePicker1.Value
         Dim cmd1 As New MySqlCommand("UPDATE pedidos SET codigo_cliente = '" & ComboBox3.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd1.ExecuteNonQuery()
-        Dim cmd2 As New MySqlCommand("UPDATE pedidos SET fecha_pedido = '" & DateTimePicker1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
+        Dim cmd2 As New MySqlCommand("UPDATE pedidos SET fecha_pedido = '" & fecha.Year & "-" & fecha.Month & "-" & fecha.Day & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd2.ExecuteNonQuery()
         Dim cmd3 As New MySqlCommand("UPDATE pedidos SET producto = '" & ComboBox1.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd3.ExecuteNonQuery()
@@ -137,13 +140,13 @@ Public Class Pedidos
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim row As DataGridViewRow = DataGridView1.CurrentRow
 
-        TextBox3.Text = row.Cells(1).Value.ToString()
-        ComboBox3.Text = row.Cells(2).Value.ToString()
-        DateTimePicker1.Text = row.Cells(4).Value.ToString()
-        ComboBox1.Text = row.Cells(5).Value.ToString()
-        TextPrecio.Text = row.Cells(6).Value.ToString()
-        TextCantidad.Text = row.Cells(7).Value.ToString()
-        Texttotal.Text = row.Cells(8).Value.ToString()
+        TextBox3.Text = row.Cells(0).Value.ToString()
+        ComboBox3.Text = row.Cells(1).Value.ToString()
+        DateTimePicker1.Text = row.Cells(2).Value
+        ComboBox1.Text = row.Cells(3).Value.ToString()
+        TextPrecio.Text = row.Cells(4).Value
+        TextCantidad.Text = row.Cells(5).Value
+        Texttotal.Text = row.Cells(6).Value
     End Sub
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
@@ -179,6 +182,14 @@ Public Class Pedidos
     End Sub
 
     Private Sub TextCantidad_TextChanged(sender As Object, e As EventArgs) Handles TextCantidad.TextChanged
-        Texttotal.Text = TextCantidad.Text * TextPrecio.Text
+        If TextCantidad.Text.Length > 0 Then
+            Texttotal.Text = TextCantidad.Text * TextPrecio.Text
+
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+        Seleccion_de_modulo.Show()
     End Sub
 End Class

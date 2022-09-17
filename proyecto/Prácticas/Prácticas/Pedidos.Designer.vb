@@ -46,6 +46,7 @@ Partial Class Pedidos
         Me.Texttotal = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TextCantidad = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -170,7 +171,6 @@ Partial Class Pedidos
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Garrafones", "Bolsas"})
         Me.ComboBox1.Location = New System.Drawing.Point(545, 57)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -286,11 +286,23 @@ Partial Class Pedidos
         Me.TextCantidad.Size = New System.Drawing.Size(120, 20)
         Me.TextCantidad.TabIndex = 29
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.Button4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(777, 172)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(90, 34)
+        Me.Button4.TabIndex = 30
+        Me.Button4.Text = "Salir"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
         'Pedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(899, 428)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextCantidad)
         Me.Controls.Add(Me.Texttotal)
         Me.Controls.Add(Me.Label11)
@@ -345,4 +357,5 @@ Partial Class Pedidos
     Friend WithEvents Texttotal As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents TextCantidad As TextBox
+    Friend WithEvents Button4 As Button
 End Class
