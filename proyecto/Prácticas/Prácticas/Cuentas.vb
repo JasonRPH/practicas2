@@ -13,7 +13,7 @@ Public Class Cuentas
     End Sub
     Private Sub conectar()
 
-        Dim squery As String = "SELECT * from cuentas "
+        Dim squery As String = "SELECT numero_cuenta,cuenta_bancaria,cheques,saldo,depositos from cuentas "
         Dim adpt As New MySqlDataAdapter(squery, conn)
         Dim ds As New DataSet()
         adpt.Fill(ds)
@@ -23,6 +23,7 @@ Public Class Cuentas
     End Sub
     Private Sub limpiar()
         TextBox1.Text = ""
+        ComboBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
         TextBox4.Text = ""
@@ -45,7 +46,7 @@ Public Class Cuentas
             conn.Open()
         End If
 
-        Dim cmd As New MySqlCommand("INSERT  INTO cuentas (cuenta_bancaria,creditos,saldo,debito) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "')", conn)
+        Dim cmd As New MySqlCommand("INSERT  INTO cuentas (numero_cuenta,cuenta_bancaria,cheques,saldo,depositos) VALUES ('" & TextBox1.Text & "', '" & ComboBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "')", conn)
 
 
         cmd.ExecuteNonQuery()
@@ -65,13 +66,13 @@ Public Class Cuentas
         If conn.State = ConnectionState.Closed Then
             conn.Open()
         End If
-        Dim cmd1 As New MySqlCommand("UPDATE cuentas SET cuenta_bancaria = '" & TextBox1.Text & "' WHERE codigo_cuentas = " & TextBox2.Text, conn)
+        Dim cmd1 As New MySqlCommand("UPDATE cuentas SET cuenta_bancaria = '" & ComboBox1.Text & "' WHERE numero_cuenta = " & TextBox1.Text, conn)
         cmd1.ExecuteNonQuery()
-        Dim cmd2 As New MySqlCommand("UPDATE cuentas SET creditos = '" & TextBox2.Text & "' WHERE codigo_cuentas = " & TextBox2.Text, conn)
+        Dim cmd2 As New MySqlCommand("UPDATE cuentas SET cheques = '" & TextBox2.Text & "' WHERE numero_cuenta = " & TextBox1.Text, conn)
         cmd2.ExecuteNonQuery()
-        Dim cmd3 As New MySqlCommand("UPDATE cuentas SET saldo = '" & TextBox3.Text & "' WHERE codigo_cuentas = " & TextBox2.Text, conn)
+        Dim cmd3 As New MySqlCommand("UPDATE cuentas SET saldo = '" & TextBox3.Text & "' WHERE numero_cuenta = " & TextBox1.Text, conn)
         cmd3.ExecuteNonQuery()
-        Dim cmd4 As New MySqlCommand("UPDATE cuentass SET debito = '" & TextBox4.Text & "' WHERE codigo_cuentas = " & TextBox2.Text, conn)
+        Dim cmd4 As New MySqlCommand("UPDATE cuentas SET depositos = '" & TextBox4.Text & "' WHERE numero_cuenta = " & TextBox1.Text, conn)
         cmd4.ExecuteNonQuery()
         conectar()
         limpiar()
@@ -84,7 +85,7 @@ Public Class Cuentas
             conn.Open()
 
         End If
-        Dim cmd1 As New MySqlCommand("DELETE from cuentas WHERE codigo_cuenta = " & TextBox3.Text, conn)
+        Dim cmd1 As New MySqlCommand("DELETE from cuentas WHERE numero_cuenta = " & TextBox1.Text, conn)
         cmd1.ExecuteNonQuery()
 
         conectar()
@@ -92,16 +93,19 @@ Public Class Cuentas
         conn.Dispose()
         limpiar()
     End Sub
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim row As DataGridViewRow = DataGridView1.CurrentRow
 
         TextBox1.Text = row.Cells(0).Value.ToString()
-        TextBox2.Text = row.Cells(1).Value.ToString()
-        TextBox3.Text = row.Cells(2).Value.ToString()
-        TextBox4.Text = row.Cells(3).Value.ToString()
+        ComboBox1.Text = row.Cells(1).Value.ToString()
+        TextBox2.Text = row.Cells(2).Value.ToString()
+        TextBox3.Text = row.Cells(3).Value.ToString()
+        TextBox4.Text = row.Cells(4).Value.ToString()
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.Hide()
+        Seleccion_de_modulo.Show()
     End Sub
 End Class

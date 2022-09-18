@@ -31,16 +31,15 @@ Partial Class movimiento
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -130,22 +129,11 @@ Partial Class movimiento
         Me.DataGridView1.Size = New System.Drawing.Size(658, 198)
         Me.DataGridView1.TabIndex = 7
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(726, 67)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(88, 34)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Actualizar"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Button3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(726, 108)
+        Me.Button3.Location = New System.Drawing.Point(726, 81)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(88, 34)
         Me.Button3.TabIndex = 9
@@ -156,7 +144,7 @@ Partial Class movimiento
         '
         Me.Button4.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Button4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(726, 147)
+        Me.Button4.Location = New System.Drawing.Point(726, 133)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(88, 34)
         Me.Button4.TabIndex = 10
@@ -170,14 +158,6 @@ Partial Class movimiento
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(188, 20)
         Me.TextBox1.TabIndex = 11
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.Wheat
-        Me.TextBox3.Location = New System.Drawing.Point(175, 84)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(188, 20)
-        Me.TextBox3.TabIndex = 13
         '
         'TextBox5
         '
@@ -209,7 +189,7 @@ Partial Class movimiento
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.Wheat
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Cheques", "Depositos"})
+        Me.ComboBox1.Items.AddRange(New Object() {"CHEQUES", "DEPOSITOS"})
         Me.ComboBox1.Location = New System.Drawing.Point(175, 47)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(188, 21)
@@ -224,20 +204,27 @@ Partial Class movimiento
         Me.ComboBox2.Size = New System.Drawing.Size(194, 21)
         Me.ComboBox2.TabIndex = 19
         '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.Wheat
+        Me.TextBox2.Location = New System.Drawing.Point(175, 85)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(188, 20)
+        Me.TextBox2.TabIndex = 20
+        '
         'movimiento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(837, 376)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
@@ -264,14 +251,13 @@ Partial Class movimiento
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
 End Class

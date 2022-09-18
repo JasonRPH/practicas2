@@ -36,13 +36,13 @@ Public Class Inventario
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim row As DataGridViewRow = DataGridView1.CurrentRow
         Try
-            TextBox1.Text = row.Cells(1).Value.ToString()
-            NumericUpDown1.Text = row.Cells(2).Value.ToString()
-            TextBox3.Text = row.Cells(3).Value.ToString()
-            TextBox2.Text = row.Cells(4).Value.ToString()
+            TextBox1.Text = row.Cells(0).Value.ToString()
+            NumericUpDown1.Text = row.Cells(1).Value.ToString()
+            TextBox3.Text = row.Cells(2).Value.ToString()
+            TextBox2.Text = row.Cells(3).Value.ToString()
         Catch ex As Exception
 
         End Try
