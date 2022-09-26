@@ -39,14 +39,16 @@ Partial Class Registro
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(41, 37)
+        Me.Label1.Location = New System.Drawing.Point(243, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(66, 23)
         Me.Label1.TabIndex = 0
@@ -56,7 +58,7 @@ Partial Class Registro
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(41, 97)
+        Me.Label2.Location = New System.Drawing.Point(244, 55)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 23)
         Me.Label2.TabIndex = 1
@@ -66,7 +68,7 @@ Partial Class Registro
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 163)
+        Me.Label3.Location = New System.Drawing.Point(244, 105)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 23)
         Me.Label3.TabIndex = 2
@@ -76,7 +78,7 @@ Partial Class Registro
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(41, 226)
+        Me.Label4.Location = New System.Drawing.Point(510, 12)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 23)
         Me.Label4.TabIndex = 3
@@ -85,7 +87,7 @@ Partial Class Registro
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox1.Location = New System.Drawing.Point(152, 35)
+        Me.TextBox1.Location = New System.Drawing.Point(335, 15)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(131, 20)
         Me.TextBox1.TabIndex = 4
@@ -93,7 +95,7 @@ Partial Class Registro
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox2.Location = New System.Drawing.Point(152, 94)
+        Me.TextBox2.Location = New System.Drawing.Point(335, 60)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(131, 20)
         Me.TextBox2.TabIndex = 5
@@ -101,7 +103,7 @@ Partial Class Registro
         'TextBox3
         '
         Me.TextBox3.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox3.Location = New System.Drawing.Point(152, 164)
+        Me.TextBox3.Location = New System.Drawing.Point(335, 110)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(131, 20)
         Me.TextBox3.TabIndex = 6
@@ -109,7 +111,7 @@ Partial Class Registro
         'TextBox4
         '
         Me.TextBox4.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox4.Location = New System.Drawing.Point(152, 227)
+        Me.TextBox4.Location = New System.Drawing.Point(691, 17)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(131, 20)
         Me.TextBox4.TabIndex = 7
@@ -117,7 +119,7 @@ Partial Class Registro
         'TextBox5
         '
         Me.TextBox5.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox5.Location = New System.Drawing.Point(551, 39)
+        Me.TextBox5.Location = New System.Drawing.Point(691, 58)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(122, 20)
         Me.TextBox5.TabIndex = 11
@@ -125,7 +127,7 @@ Partial Class Registro
         'TextBox6
         '
         Me.TextBox6.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox6.Location = New System.Drawing.Point(551, 98)
+        Me.TextBox6.Location = New System.Drawing.Point(691, 110)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(122, 20)
         Me.TextBox6.TabIndex = 10
@@ -134,7 +136,7 @@ Partial Class Registro
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(328, 94)
+        Me.Label5.Location = New System.Drawing.Point(510, 107)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(91, 23)
         Me.Label5.TabIndex = 9
@@ -144,7 +146,7 @@ Partial Class Registro
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(340, 33)
+        Me.Label6.Location = New System.Drawing.Point(510, 55)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(64, 23)
         Me.Label6.TabIndex = 8
@@ -152,11 +154,11 @@ Partial Class Registro
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button1.Font = New System.Drawing.Font("Perpetua Titling MT", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(357, 226)
+        Me.Button1.Location = New System.Drawing.Point(241, 172)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(262, 91)
+        Me.Button1.Size = New System.Drawing.Size(237, 91)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Registrar"
         Me.Button1.UseVisualStyleBackColor = False
@@ -164,7 +166,7 @@ Partial Class Registro
         'TextBox7
         '
         Me.TextBox7.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox7.Location = New System.Drawing.Point(551, 164)
+        Me.TextBox7.Location = New System.Drawing.Point(691, 159)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(122, 20)
         Me.TextBox7.TabIndex = 14
@@ -173,7 +175,7 @@ Partial Class Registro
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(328, 158)
+        Me.Label7.Location = New System.Drawing.Point(510, 159)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(175, 23)
         Me.Label7.TabIndex = 13
@@ -182,19 +184,30 @@ Partial Class Registro
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(-1, -2)
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(712, 338)
+        Me.PictureBox1.Size = New System.Drawing.Size(237, 261)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(232, 2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(597, 261)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 16
+        Me.PictureBox2.TabStop = False
         '
         'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.ClientSize = New System.Drawing.Size(709, 337)
+        Me.ClientSize = New System.Drawing.Size(828, 262)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
@@ -210,12 +223,13 @@ Partial Class Registro
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.PictureBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Registro"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -237,4 +251,5 @@ Partial Class Registro
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

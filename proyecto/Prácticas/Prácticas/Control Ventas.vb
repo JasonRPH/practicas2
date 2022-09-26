@@ -81,7 +81,7 @@ Public Class Control_Ventas
         fecha = DateTimePicker1.Value
         Dim cmd As New MySqlCommand("INSERT  INTO control_ventas (codigo_cliente,fecha,producto,precio,cantidad,total) VALUES ('" & ComboBox3.Text & "', '" & fecha.Year & "-" & fecha.Month & "-" & fecha.Day & "', '" & ComboBox1.Text & "','" & TBprecio.Text & "','" & TBcantidad.Text & "','" & TBtotal.Text & "')", conn)
 
-
+        MsgBox(" han sido ingresado los datos")
 
         cmd.ExecuteNonQuery()
 
@@ -115,6 +115,7 @@ Public Class Control_Ventas
         cmd5.ExecuteNonQuery()
         Dim cmd6 As New MySqlCommand("UPDATE control_ventas SET total = '" & TBtotal.Text & "' WHERE codigo_control_ventas = " & TextBox1.Text, conn)
         cmd6.ExecuteNonQuery()
+        MsgBox(" ha sido actualizado control de ventas ")
         conectar()
         limpiar()
         conn.Close()
@@ -128,7 +129,7 @@ Public Class Control_Ventas
 
         Dim cmd1 As New MySqlCommand("DELETE from control_ventas WHERE codigo_control_ventas = " & TextBox1.Text, conn)
         cmd1.ExecuteNonQuery()
-
+        MsgBox(" han sido eliminado este control de ventas")
 
         conectar()
         conn.Close()

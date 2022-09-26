@@ -47,8 +47,10 @@ Partial Class Control_Ventas
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -56,7 +58,7 @@ Partial Class Control_Ventas
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Bisque
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 8)
+        Me.Label1.Location = New System.Drawing.Point(237, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(155, 23)
         Me.Label1.TabIndex = 0
@@ -67,7 +69,7 @@ Partial Class Control_Ventas
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Bisque
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(376, 46)
+        Me.Label2.Location = New System.Drawing.Point(527, 41)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(72, 23)
         Me.Label2.TabIndex = 1
@@ -78,7 +80,7 @@ Partial Class Control_Ventas
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Bisque
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(388, 6)
+        Me.Label3.Location = New System.Drawing.Point(529, 7)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 23)
         Me.Label3.TabIndex = 2
@@ -89,7 +91,7 @@ Partial Class Control_Ventas
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Bisque
         Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(376, 157)
+        Me.Label4.Location = New System.Drawing.Point(527, 131)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 23)
         Me.Label4.TabIndex = 3
@@ -99,7 +101,7 @@ Partial Class Control_Ventas
         '
         Me.Button1.BackColor = System.Drawing.Color.AntiqueWhite
         Me.Button1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(699, 12)
+        Me.Button1.Location = New System.Drawing.Point(829, 5)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(90, 32)
         Me.Button1.TabIndex = 5
@@ -110,7 +112,7 @@ Partial Class Control_Ventas
         '
         Me.Button2.BackColor = System.Drawing.Color.AntiqueWhite
         Me.Button2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(699, 62)
+        Me.Button2.Location = New System.Drawing.Point(829, 46)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(90, 34)
         Me.Button2.TabIndex = 6
@@ -121,7 +123,7 @@ Partial Class Control_Ventas
         '
         Me.Button3.BackColor = System.Drawing.Color.AntiqueWhite
         Me.Button3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(699, 114)
+        Me.Button3.Location = New System.Drawing.Point(829, 86)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 30)
         Me.Button3.TabIndex = 7
@@ -132,7 +134,7 @@ Partial Class Control_Ventas
         '
         Me.Button4.BackColor = System.Drawing.Color.AntiqueWhite
         Me.Button4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(699, 162)
+        Me.Button4.Location = New System.Drawing.Point(829, 122)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(90, 30)
         Me.Button4.TabIndex = 8
@@ -141,8 +143,9 @@ Partial Class Control_Ventas
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.LightCyan
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 241)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 241)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(842, 217)
         Me.DataGridView1.TabIndex = 9
@@ -150,9 +153,9 @@ Partial Class Control_Ventas
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(3, -1)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, -1)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(842, 459)
+        Me.PictureBox1.Size = New System.Drawing.Size(918, 459)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
@@ -160,23 +163,23 @@ Partial Class Control_Ventas
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.LemonChiffon
-        Me.TextBox1.Location = New System.Drawing.Point(175, 11)
+        Me.TextBox1.Location = New System.Drawing.Point(397, 17)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(183, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(119, 20)
         Me.TextBox1.TabIndex = 11
         '
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.LemonChiffon
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(450, 51)
+        Me.ComboBox1.Location = New System.Drawing.Point(623, 43)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
         Me.ComboBox1.TabIndex = 12
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(450, 12)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(623, 7)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 13
@@ -184,7 +187,7 @@ Partial Class Control_Ventas
         'TBcantidad
         '
         Me.TBcantidad.BackColor = System.Drawing.Color.LemonChiffon
-        Me.TBcantidad.Location = New System.Drawing.Point(454, 157)
+        Me.TBcantidad.Location = New System.Drawing.Point(623, 132)
         Me.TBcantidad.Name = "TBcantidad"
         Me.TBcantidad.Size = New System.Drawing.Size(200, 20)
         Me.TBcantidad.TabIndex = 14
@@ -194,7 +197,7 @@ Partial Class Control_Ventas
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Bisque
         Me.Label7.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(389, 118)
+        Me.Label7.Location = New System.Drawing.Point(529, 101)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(54, 23)
         Me.Label7.TabIndex = 19
@@ -205,7 +208,7 @@ Partial Class Control_Ventas
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Bisque
         Me.Label8.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(376, 83)
+        Me.Label8.Location = New System.Drawing.Point(527, 70)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(72, 23)
         Me.Label8.TabIndex = 20
@@ -216,7 +219,7 @@ Partial Class Control_Ventas
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Bisque
         Me.Label9.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(13, 154)
+        Me.Label9.Location = New System.Drawing.Point(239, 163)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(27, 23)
         Me.Label9.TabIndex = 21
@@ -227,7 +230,7 @@ Partial Class Control_Ventas
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Bisque
         Me.Label10.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(13, 118)
+        Me.Label10.Location = New System.Drawing.Point(239, 122)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(75, 23)
         Me.Label10.TabIndex = 22
@@ -238,7 +241,7 @@ Partial Class Control_Ventas
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Bisque
         Me.Label11.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(13, 83)
+        Me.Label11.Location = New System.Drawing.Point(239, 86)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(115, 23)
         Me.Label11.TabIndex = 23
@@ -247,7 +250,7 @@ Partial Class Control_Ventas
         'TBprecio
         '
         Me.TBprecio.BackColor = System.Drawing.Color.LemonChiffon
-        Me.TBprecio.Location = New System.Drawing.Point(454, 121)
+        Me.TBprecio.Location = New System.Drawing.Point(623, 101)
         Me.TBprecio.Name = "TBprecio"
         Me.TBprecio.Size = New System.Drawing.Size(200, 20)
         Me.TBprecio.TabIndex = 24
@@ -255,7 +258,7 @@ Partial Class Control_Ventas
         'TBtotal
         '
         Me.TBtotal.BackColor = System.Drawing.Color.LemonChiffon
-        Me.TBtotal.Location = New System.Drawing.Point(454, 199)
+        Me.TBtotal.Location = New System.Drawing.Point(623, 158)
         Me.TBtotal.Name = "TBtotal"
         Me.TBtotal.Size = New System.Drawing.Size(200, 20)
         Me.TBtotal.TabIndex = 25
@@ -265,7 +268,7 @@ Partial Class Control_Ventas
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Bisque
         Me.Label12.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(389, 199)
+        Me.Label12.Location = New System.Drawing.Point(529, 163)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(43, 23)
         Me.Label12.TabIndex = 26
@@ -275,9 +278,9 @@ Partial Class Control_Ventas
         '
         Me.ComboBox3.BackColor = System.Drawing.Color.LemonChiffon
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(175, 51)
+        Me.ComboBox3.Location = New System.Drawing.Point(389, 54)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(183, 21)
+        Me.ComboBox3.Size = New System.Drawing.Size(127, 21)
         Me.ComboBox3.TabIndex = 18
         '
         'Label5
@@ -285,17 +288,28 @@ Partial Class Control_Ventas
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Bisque
         Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(13, 46)
+        Me.Label5.Location = New System.Drawing.Point(239, 52)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(108, 23)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Codigo cliente"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, -1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(219, 245)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 27
+        Me.PictureBox2.TabStop = False
+        '
         'Control_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(850, 455)
+        Me.ClientSize = New System.Drawing.Size(931, 455)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TBtotal)
         Me.Controls.Add(Me.TBprecio)
@@ -324,6 +338,7 @@ Partial Class Control_Ventas
         Me.Text = "Control_Ventas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -353,4 +368,5 @@ Partial Class Control_Ventas
     Friend WithEvents Label12 As Label
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

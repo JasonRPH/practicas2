@@ -41,7 +41,7 @@ Public Class Form1
         If CheckBox1.Checked = True Then
             TextBox2.PasswordChar = ""
         Else
-            TextBox2.PasswordChar = ""
+            TextBox2.PasswordChar = "*"
         End If
     End Sub
 

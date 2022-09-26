@@ -46,7 +46,7 @@ Partial Class Inventario
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.MintCream
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(390, 78)
+        Me.DataGridView1.Location = New System.Drawing.Point(490, 189)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(419, 228)
         Me.DataGridView1.TabIndex = 0
@@ -55,16 +55,16 @@ Partial Class Inventario
         '
         Me.TextBox3.BackColor = System.Drawing.Color.Azure
         Me.TextBox3.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(228, 232)
+        Me.TextBox3.Location = New System.Drawing.Point(684, 121)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(132, 28)
         Me.TextBox3.TabIndex = 3
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Azure
+        Me.Button1.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Button1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(58, 325)
+        Me.Button1.Location = New System.Drawing.Point(303, 223)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(84, 49)
         Me.Button1.TabIndex = 5
@@ -73,9 +73,9 @@ Partial Class Inventario
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Azure
+        Me.Button2.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Button2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(159, 325)
+        Me.Button2.Location = New System.Drawing.Point(393, 223)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(91, 49)
         Me.Button2.TabIndex = 6
@@ -86,7 +86,7 @@ Partial Class Inventario
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(54, 142)
+        Me.Label1.Location = New System.Drawing.Point(608, 70)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(70, 20)
         Me.Label1.TabIndex = 7
@@ -96,7 +96,7 @@ Partial Class Inventario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(54, 250)
+        Me.Label2.Location = New System.Drawing.Point(608, 127)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 8
@@ -106,7 +106,7 @@ Partial Class Inventario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(54, 188)
+        Me.Label3.Location = New System.Drawing.Point(320, 124)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 20)
         Me.Label3.TabIndex = 9
@@ -114,9 +114,9 @@ Partial Class Inventario
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.Azure
+        Me.Button3.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Button3.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(276, 325)
+        Me.Button3.Location = New System.Drawing.Point(303, 314)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(84, 49)
         Me.Button3.TabIndex = 11
@@ -127,7 +127,7 @@ Partial Class Inventario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Palatino Linotype", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(313, 28)
+        Me.Label4.Location = New System.Drawing.Point(485, 9)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(219, 28)
         Me.Label4.TabIndex = 12
@@ -137,7 +137,7 @@ Partial Class Inventario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(54, 81)
+        Me.Label5.Location = New System.Drawing.Point(320, 73)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(95, 20)
         Me.Label5.TabIndex = 14
@@ -147,16 +147,16 @@ Partial Class Inventario
         '
         Me.TextBox2.BackColor = System.Drawing.Color.Azure
         Me.TextBox2.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(228, 78)
+        Me.TextBox2.Location = New System.Drawing.Point(421, 70)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 28)
         Me.TextBox2.TabIndex = 13
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.Color.Azure
+        Me.Button4.BackColor = System.Drawing.Color.LightGoldenrodYellow
         Me.Button4.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(375, 325)
+        Me.Button4.Location = New System.Drawing.Point(393, 314)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(84, 49)
         Me.Button4.TabIndex = 15
@@ -166,9 +166,9 @@ Partial Class Inventario
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(-3, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(817, 402)
+        Me.PictureBox1.Size = New System.Drawing.Size(286, 417)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
@@ -177,7 +177,7 @@ Partial Class Inventario
         '
         Me.TextBox4.BackColor = System.Drawing.Color.Azure
         Me.TextBox4.Font = New System.Drawing.Font("Palatino Linotype", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(228, 180)
+        Me.TextBox4.Location = New System.Drawing.Point(422, 124)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(132, 28)
         Me.TextBox4.TabIndex = 17
@@ -187,7 +187,7 @@ Partial Class Inventario
         Me.ComboBox1.BackColor = System.Drawing.Color.Azure
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"GARRAFONES", "BOLSAS"})
-        Me.ComboBox1.Location = New System.Drawing.Point(228, 144)
+        Me.ComboBox1.Location = New System.Drawing.Point(684, 73)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(132, 21)
         Me.ComboBox1.TabIndex = 18
@@ -196,8 +196,8 @@ Partial Class Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.CadetBlue
-        Me.ClientSize = New System.Drawing.Size(820, 396)
+        Me.BackColor = System.Drawing.Color.LightCyan
+        Me.ClientSize = New System.Drawing.Size(908, 413)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Button4)
@@ -216,7 +216,7 @@ Partial Class Inventario
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Inventario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Inventario"
+        Me.Text = " "
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

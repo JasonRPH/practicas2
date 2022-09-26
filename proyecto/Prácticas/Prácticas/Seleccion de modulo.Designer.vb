@@ -36,10 +36,12 @@ Partial Class Seleccion_de_modulo
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Azure
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.Font = New System.Drawing.Font("Rockwell", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(32, 12)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.Location = New System.Drawing.Point(56, 20)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 45)
+        Me.Button1.Size = New System.Drawing.Size(85, 50)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Inventario"
         Me.Button1.UseVisualStyleBackColor = False
@@ -48,7 +50,7 @@ Partial Class Seleccion_de_modulo
         '
         Me.Button3.BackColor = System.Drawing.Color.Azure
         Me.Button3.Font = New System.Drawing.Font("Rockwell", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(32, 150)
+        Me.Button3.Location = New System.Drawing.Point(339, 20)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(85, 43)
         Me.Button3.TabIndex = 2
@@ -59,7 +61,7 @@ Partial Class Seleccion_de_modulo
         '
         Me.Button4.BackColor = System.Drawing.Color.Azure
         Me.Button4.Font = New System.Drawing.Font("Rockwell", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(215, 150)
+        Me.Button4.Location = New System.Drawing.Point(197, 110)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(85, 43)
         Me.Button4.TabIndex = 3
@@ -70,7 +72,7 @@ Partial Class Seleccion_de_modulo
         '
         Me.Button5.BackColor = System.Drawing.Color.Azure
         Me.Button5.Font = New System.Drawing.Font("Rockwell", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(120, 216)
+        Me.Button5.Location = New System.Drawing.Point(197, 20)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(85, 43)
         Me.Button5.TabIndex = 4
@@ -81,9 +83,9 @@ Partial Class Seleccion_de_modulo
         '
         Me.Button2.BackColor = System.Drawing.Color.Azure
         Me.Button2.Font = New System.Drawing.Font("Rockwell", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(129, 80)
+        Me.Button2.Location = New System.Drawing.Point(56, 99)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(85, 45)
+        Me.Button2.Size = New System.Drawing.Size(85, 54)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "Control de Ventas"
         Me.Button2.UseVisualStyleBackColor = False
@@ -92,7 +94,7 @@ Partial Class Seleccion_de_modulo
         '
         Me.Button6.BackColor = System.Drawing.Color.Azure
         Me.Button6.Font = New System.Drawing.Font("Rockwell", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(215, 12)
+        Me.Button6.Location = New System.Drawing.Point(339, 110)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(85, 45)
         Me.Button6.TabIndex = 6
@@ -104,7 +106,7 @@ Partial Class Seleccion_de_modulo
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(-2, -2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(350, 269)
+        Me.PictureBox1.Size = New System.Drawing.Size(473, 197)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
@@ -113,8 +115,8 @@ Partial Class Seleccion_de_modulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.ClientSize = New System.Drawing.Size(347, 271)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(469, 193)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button5)

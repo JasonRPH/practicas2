@@ -47,7 +47,7 @@ Public Class Cuentas
         End If
 
         Dim cmd As New MySqlCommand("INSERT  INTO cuentas (numero_cuenta,cuenta_bancaria,cheques,saldo,depositos) VALUES ('" & TextBox1.Text & "', '" & ComboBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "')", conn)
-
+        MsgBox(" la cuenta ha sido ingresado")
 
         cmd.ExecuteNonQuery()
 
@@ -74,6 +74,7 @@ Public Class Cuentas
         cmd3.ExecuteNonQuery()
         Dim cmd4 As New MySqlCommand("UPDATE cuentas SET depositos = '" & TextBox4.Text & "' WHERE numero_cuenta = " & TextBox1.Text, conn)
         cmd4.ExecuteNonQuery()
+        MsgBox("cuenta ha sido actualizado")
         conectar()
         limpiar()
         conn.Close()
@@ -87,7 +88,7 @@ Public Class Cuentas
         End If
         Dim cmd1 As New MySqlCommand("DELETE from cuentas WHERE numero_cuenta = " & TextBox1.Text, conn)
         cmd1.ExecuteNonQuery()
-
+        MsgBox("cuenta ha sido eliminada")
         conectar()
         conn.Close()
         conn.Dispose()
@@ -107,5 +108,25 @@ Public Class Cuentas
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Hide()
         Seleccion_de_modulo.Show()
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class

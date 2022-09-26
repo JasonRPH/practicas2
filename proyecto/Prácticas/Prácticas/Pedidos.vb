@@ -81,7 +81,7 @@ Public Class Pedidos
         End If
         fecha = DateTimePicker1.Value
         Dim cmd As New MySqlCommand("INSERT  INTO pedidos (codigo_cliente,fecha_pedido,producto,precio,cantidad,total) VALUES ('" & ComboBox3.Text & "', '" & fecha.Year & "-" & fecha.Month & "-" & fecha.Day & "', '" & ComboBox1.Text & "','" & TextPrecio.Text & "','" & TextCantidad.Text & "','" & Texttotal.Text & "')", conn)
-
+        MsgBox(" pedido ha sido ingresado ")
 
 
         cmd.ExecuteNonQuery()
@@ -115,6 +115,7 @@ Public Class Pedidos
         cmd5.ExecuteNonQuery()
         Dim cmd6 As New MySqlCommand("UPDATE pedidos SET total = '" & Texttotal.Text & "' WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd6.ExecuteNonQuery()
+        MsgBox(" pedido ha sido actualizado ")
         conectar()
         limpiar()
         conn.Close()
@@ -127,7 +128,7 @@ Public Class Pedidos
 
         Dim cmd1 As New MySqlCommand("DELETE from pedidos WHERE codigo_pedido = " & TextBox3.Text, conn)
         cmd1.ExecuteNonQuery()
-
+        MsgBox(" pedido ha sido eliminado ")
 
         conectar()
         conn.Close()

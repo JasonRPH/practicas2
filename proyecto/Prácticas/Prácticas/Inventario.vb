@@ -46,7 +46,7 @@ Public Class Inventario
             conn.Open()
         End If
         Dim cmd As New MySqlCommand("INSERT  INTO inventario (producto,precio,cantidad) VALUES ( '" & ComboBox1.Text & "', '" & TextBox4.Text & "', '" & TextBox3.Text & "')", conn)
-
+        MsgBox(" datos del inventario han sido ingresados ")
 
         cmd.ExecuteNonQuery()
 
@@ -70,6 +70,7 @@ Public Class Inventario
         cmd2.ExecuteNonQuery()
         Dim cmd3 As New MySqlCommand("UPDATE inventario SET cantidad = '" & TextBox3.Text & "' WHERE id_inventario = " & TextBox2.Text, conn)
         cmd3.ExecuteNonQuery()
+        MsgBox(" el inventario ha sido actualizado ")
         conectar()
         limpiar()
         conn.Close()
@@ -83,7 +84,7 @@ Public Class Inventario
 
         Dim cmd1 As New MySqlCommand("DELETE from inventario WHERE id_inventario = " & TextBox2.Text, conn)
         cmd1.ExecuteNonQuery()
-
+        MsgBox(" el inventario ha sido eliminado ")
 
         conectar()
         conn.Close()

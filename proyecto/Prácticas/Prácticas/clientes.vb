@@ -55,7 +55,7 @@ Public Class clientes
         End If
 
         Dim cmd As New MySqlCommand("INSERT  INTO clientes (nombre,direccion,telefono, nit) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox5.Text & "')", conn)
-
+        MsgBox("cliente ha sido ingresado")
 
         cmd.ExecuteNonQuery()
 
@@ -76,7 +76,7 @@ Public Class clientes
 
         Dim cmd1 As New MySqlCommand("DELETE from clientes WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd1.ExecuteNonQuery()
-
+        MsgBox("cliente ha sido eliminado")
 
         conectar()
         conn.Close()
@@ -112,6 +112,7 @@ Public Class clientes
         cmd3.ExecuteNonQuery()
         Dim cmd4 As New MySqlCommand("UPDATE clientes SET nit = '" & TextBox5.Text & "' WHERE codigo_cliente = " & TextBox4.Text, conn)
         cmd4.ExecuteNonQuery()
+        MsgBox("cliente ha sido actualizado")
         conectar()
         limpiar()
         conn.Close()

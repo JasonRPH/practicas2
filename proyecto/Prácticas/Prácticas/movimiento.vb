@@ -78,6 +78,7 @@ Public Class movimiento
             cmd3.ExecuteNonQuery()
             Dim cmd4 As New MySqlCommand("UPDATE cuentas SET saldo = saldo + " & TextBox6.Text & " WHERE cuenta_bancaria = '" & ComboBox2.Text & "'", conn)
             cmd4.ExecuteNonQuery()
+            MsgBox(" este movimiento ha sido ingresado")
         End If
         cmd.ExecuteNonQuery()
 
@@ -111,6 +112,7 @@ Public Class movimiento
             cmd4.ExecuteNonQuery()
             Dim cmd5 As New MySqlCommand("UPDATE cuentas SET saldo = saldo - " & TextBox6.Text & " WHERE cuenta_bancaria = '" & ComboBox2.Text & "'", conn)
             cmd5.ExecuteNonQuery()
+            MsgBox(" este movimiento ha sido eliminado")
         End If
         cmd.ExecuteNonQuery()
         If conn.State = ConnectionState.Open Then
